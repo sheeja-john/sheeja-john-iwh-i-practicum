@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1= title
+    a(href='/') Return to the homepage
+    form(action='/update-cobj', method='POST')
+      label(for='firstname') First Name
+      br
+      input#firstname(type='text', name='firstname', required)
+      br
+      label(for='lastname') Last Name
+      br
+      input#lastname(type='text', name='lastname', required)
+      br
+      label(for='favourite_game') Favourite Game
+      br
+      input#favourite_game(type='text', name='favourite_game')
+      br
+      label(for='level') Level
+      br
+      input#level(type='text', name='level')
+      br
+      label(for='bio') Bio
+      br
+      textarea#bio(name='bio')
+      br
+      input(type='submit', value='Save')

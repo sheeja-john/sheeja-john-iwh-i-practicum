@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1= title
+    a(href='/update-cobj') Add to this table
+    table
+      thead
+        tr
+          th First Name
+          th Last Name
+          th Favourite Game
+          th Level
+          th Bio
+      tbody
+        each contact in contacts
+          tr
+            td= contact.properties.firstname
+            td= contact.properties.lastname
+            td= contact.properties.favourite_game
+            td= contact.properties.level
+            td= contact.properties.bio
